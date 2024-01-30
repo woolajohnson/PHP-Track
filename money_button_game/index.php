@@ -13,14 +13,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Money Button Game</title>
-        <style>
-            .win_color {
-                color: green;
-            }
-            .lose_color {
-                color: red;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <main>
@@ -56,6 +49,7 @@
                     <p>by -3000 up to 5000</p>
                 </form>
             </section>
+            <h3>Game Host:</h3>
             <div class="host_game">
                 <?= $_SESSION['message']; ?>
             </div>

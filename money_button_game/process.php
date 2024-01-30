@@ -10,12 +10,12 @@ if (isset($_POST['reset'])) {
     header('Location: index.php');
     exit();
 }
-$risk_levels = [
+$risk_levels = array(
     'low_risk' => rand(-25, 100),
     'moderate_risk' => rand(-100, 1000),
     'high_risk' => rand(-500, 2500),
     'severe_risk' => rand(-3000, 5000)
-];
+);
 if ($_SESSION['money'] <= 0) {
     $current_message = "You don't have enough balance to play. You can Reset the Game!";
     $_SESSION['message'] = $previous_message . "<br><span class='{$_SESSION['color']}'>{$current_message}</span>";

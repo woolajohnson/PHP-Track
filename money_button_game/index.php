@@ -6,9 +6,6 @@
     if(!isset($_SESSION['message'])) {
         $_SESSION['message'] = "";
     }
-    if(!isset($_SESSION['color'])) {
-        $_SESSION['color'] = "";
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

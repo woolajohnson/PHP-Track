@@ -57,7 +57,7 @@
             $errors[] = "The Issue Details cannot be more than 250 characters!";
         }
         if(empty($errors)) {
-            $errors[] = "Thank you for your patience! Please wait for a response from our IT team.";
+            $_SESSION['success'] = "Thank you for your patience! Please wait for a response from our IT team.";
         }
         $_SESSION['errors'] = $errors;
         header('Location: index.php');

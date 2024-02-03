@@ -1,0 +1,21 @@
+1. Authentication:
+
+Fatal error: Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES)
+mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES)
+
+Fix: You need to make sure to enter user and password correctly to have access.
+
+2. Authorization:
+
+Fatal error: Uncaught mysqli_sql_exception: Unknown database 'new_db'
+mysqli_sql_exception: Unknown database 'new_db'
+
+Fix: Make sure you are authorized to create the database and put the correct database name information.
+
+3. Network:
+
+Warning: mysqli::__construct(): php_network_getaddresses: getaddrinfo for new_localhost failed: No such host is known.
+Fatal error: Uncaught mysqli_sql_exception: php_network_getaddresses: getaddrinfo for new_localhost failed: No such host is known.
+mysqli_sql_exception: php_network_getaddresses: getaddrinfo for new_localhost failed: No such host is known. 
+
+Fix: The network configuration is represented by the define('DB_HOST', 'localhost'), so make sure to put the correct information to establish a network connection.

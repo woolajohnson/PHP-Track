@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    max-width: 35rem;
+    margin: 3rem auto 1rem;
+}
+form {
+    text-align: center;
+    margin: 3rem auto;
+    padding: 3rem;
+    border: 2px solid blue;
+    label {
+        font-size: 1.4rem;
+        vertical-align: bottom;
+        color: blue;
+    }
+    input {
+        padding: 0.3em;
+    }
+    #submit {
+        background-color: #333333;
+        color: #fff;
+        border-radius: 0.2em;
+        outline: none;
+        padding: 0.5em 0.7em;
+        cursor: pointer;
+        border: none;
+    }
+}
+table {
+    width: 90%;
+    text-align: center;
+    margin: 3rem auto;
+    padding: 1rem;
+    outline: 1px solid blue;
+    border-collapse: collapse;
+    border-color: blue;
+    th,
+    td {
+        padding: 0.6em;
+    }
+    thead {
+        background-color: #f0f0f0;
+        color: blue;
+    }
+}
+.nav {
+    margin-top: 1rem;
+    text-decoration: none;
+    padding: 0.3em 0.7em;
+    background-color: blue;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 0.3em;
+}
+.delete_button {
+    text-decoration: none;
+    padding: 0.2em 0.6em;
+    background-color: red;
+    color: #fff;
+    border-radius: 0.2em;
+}
+p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.success_message {
+    background-color: rgb(78, 202, 78);
+    color: #fff;
+    padding: 0.3em 1em;
+    border-radius: 0.3em;
+}
+.error_message {
+    background-color: red;
+    padding: 0.4em;
+    color: #fff;
+    border-radius: 0.3em;
+}

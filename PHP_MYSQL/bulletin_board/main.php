@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require_once('new-connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@
     </head>
     <body>
         <main>
-            <h1>Bulletin Board Entry</h1>
+            <h1>Bulletin Board View</h1>
 <?php
         if(isset($_SESSION['message'])) {
 ?>
@@ -20,17 +21,18 @@
 <?php
         unset($_SESSION['message']);
         }
+        $query = "SELECT *, DATE_FORMAT(created_at, '%m/%d/%Y') AS date FROM boards ORDER BY created_at DESC";
+        $result = fetch_all($query);
+        foreach($result as $row) {
+?>  
+            <section>
+                <h3><?= $row['date']?> - <?= $row['subject']?></h3>
+                <p><?= $row['details']?></p>
+            </section>
+<?php 
+        }
 ?>
-            <form action="process.php" method="POST">
-                <label for="subject">Subject:</label>
-                <input class="field" id="subject" type="text" name="subject">
-
-                <label for="details">Details:</label>
-                <textarea class="field" name="details" id="details" cols="30" rows="5"></textarea>
-                <!-- <input class="field" type="text" name="details"> -->
-                <input type="submit" class="nav" name="add" id="add" value="Add">
-                <a href="main.php" class="nav" >Skip</a>
-            </form>
+            <a id="get_back" href="index.php" class="nav" >Get back</a>
         </main>
     </body>
 </html>

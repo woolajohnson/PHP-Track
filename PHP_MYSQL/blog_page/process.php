@@ -69,7 +69,7 @@
             $query = "INSERT INTO users (first_name, last_name, email, contact, password, salt) VALUES ('{$first_name}', '{$last_name}', '{$email}', '{$contact}', '{$encrypted_password}', '{$salt}')";
             $connection->query($query);
             $_SESSION['success'] = "Congratulations! You have successfully registered. Log in now to get started.";
-            header('Location: index.php');
+            header('Location: login.php');
             exit();
         }
         $_SESSION['errors'] = $errors;
@@ -86,7 +86,7 @@
             if($user['password'] == $encrypted_password) {
                 $_SESSION['success'] = "Congratulations! You have successfully login.";
                 $_SESSION['user'] = $user['id'];
-                header('Location: dashboard.php');
+                header('Location: index.php');
                 exit();
             } else {
                 $errors[] = "Sorry, the entered credentials are not valid. Try again.";
@@ -95,13 +95,13 @@
             $errors[] = "Sorry, the entered credentials are not valid. Try again.";
         }
         $_SESSION['errors'] = $errors;
-        header('Location: index.php');
+        header('Location: login.php');
         exit();
     }
     if(isset($_POST['logout'])) {
         session_unset();
         session_destroy();
-        header('Location: index.php');
+        header('Location: login.php');
         exit();
     }
     if(isset($_POST['forgot_password'])) {

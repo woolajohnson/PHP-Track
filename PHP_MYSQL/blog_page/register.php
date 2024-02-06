@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registration | Authentication I</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <main>
@@ -46,7 +46,7 @@
 
                 <input type="submit" name="register" id="register" value="Register">
             </form>
-            <p class="nav">Already have an account? <a href="index.php">Sign in</a></p>
+            <p class="nav">Already have an account? <a href="login.php">Sign in</a></p>
         </main>
     </body>
 </html>

@@ -6,13 +6,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Authentication I</title>
+        <title>Forgot Password | Authentication I</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/" />
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <main>
-            <h1>Sign in to your account</h1>
+            <h1>Forgotten Password</h1>
             <div class="message">
 <?php 
             if(!empty($_SESSION['errors'])) {
@@ -31,16 +31,15 @@
 ?>
             </div>
             <form action="process.php" method="POST">
-                <label for="email">Email</span></label>
+                <label for="email">Enter your email</span></label>
                 <input type="text" name="email" id="email">
 
-                <label for="password">Password</span></label>
-                <input type="password" name="password">
+                <label for="contact">Enter contact number</span></label>
+                <input type="text" name="contact" id="contact">
 
-                <input type="submit" name="login" id="login" value="Login">
+                <input type="submit" name="forgot_password" id="forgot_password" value="Submit">
             </form>
-            <p class="nav">Don&apos;t have an account? <a href="register.php">Join here</a></p>
-            <p class="nav" id="forgot_password"><a href="forgot_password.php">Forgot password?</a></p>
+            <p class="nav"><a href="index.php">Sign in instead?</a></p>
         </main>
     </body>
 </html>

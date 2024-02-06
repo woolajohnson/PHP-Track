@@ -6,9 +6,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Forgot Password | Authentication I</title>
+        <title>Forgot Password | The Blog Page</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <main>
@@ -39,7 +39,7 @@
 
                 <input type="submit" name="forgot_password" id="forgot_password" value="Submit">
             </form>
-            <p class="nav"><a href="index.php">Sign in instead?</a></p>
+            <p class="nav"><a href="login.php">Sign in instead?</a></p>
         </main>
     </body>
 </html>

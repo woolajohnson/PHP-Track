@@ -22,13 +22,21 @@ body {
             display: inline-block;
             font-size: 1rem;
         }
-        h3 a {
-            text-decoration: none;
+        h3 {
             font-size: 1.5rem;
-            color: #000;
         }
         #form_logout {
-            margin-left: 40rem;
+            margin-left: 5rem;
+        }
+        a {
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            background-color: blue;
+            border: none;
+            cursor: pointer;
+            padding: 0.2em 0.6em;
+            border-radius: 0.2em;
         }
     }
 }
@@ -107,19 +115,28 @@ form {
         border: none;
         cursor: pointer;
         color: #fff;
+        padding: 0.2em 0.6em;
+        border-radius: 0.2em;
     }
 }
 .review_block {
     color: blue;
+    margin-bottom: 1.5rem;
     h4 {
         margin-bottom: 0.2rem;
     }
+    p {
+        color: #000;
+    }
 }
 .replies_block {
-    margin: 1.3rem 0 0 auto;
+    margin: 0.5rem 0 1.3rem auto;
     width: 70%;
     color: green;
     h4 {
         margin-bottom: 0.2rem;
+    }
+    p {
+        color: #000;
     }
 }

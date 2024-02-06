@@ -6,7 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Authentication I</title>
+        <title>Login | The Blog Page</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/" />
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -39,6 +39,7 @@
 
                 <input type="submit" name="login" id="login" value="Login">
             </form>
+            <p class="nav"><a href="index.php">View blog post</a></p>
             <p class="nav">Don&apos;t have an account? <a href="register.php">Join here</a></p>
             <p class="nav" id="forgot_password"><a href="forgot_password.php">Forgot password?</a></p>
         </main>

@@ -1,10 +1,6 @@
 <?php 
     require_once('new-connection.php');
     include_once ('process_blog.php');
-    if(isset($_SESSION['user'])) {
-        $query = "SELECT * FROM users WHERE id = '{$_SESSION['user']}'";
-        $user = fetch_record($query);
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,10 +14,23 @@
     <body>
         <section class="nav_container">
             <nav>
-                <h3><a href="#">Blog</a></h3>
+                
+<?php 
+            if(isset($_SESSION['user'])) {
+?>
+                <h3>Welcome, <?= $_SESSION['first_name']?></h3>
                 <form id="form_logout" action="process.php" method="POST">
+
+
                     <input type="submit" name="logout" id="logout" value="Logout">
                 </form>
+<?php
+            } else {
+?>
+                <a href="login.php">Login</a>
+<?php
+            }
+?>
             </nav>
         </section>
         <main>
@@ -40,7 +49,7 @@
 <?php 
         if (isset($_SESSION['user'])) {
 ?>
-            <form action="process_blog.php" method="POST">
+            <form id="review_form_field" action="process_blog.php" method="POST">
                 <label for="review_field">Leave a Review</label>
                 <textarea name="review_field" id="review_field" cols="30" rows="10"></textarea>
                 <input type="submit" name="review_button" id="review_button" value="Post a review">
@@ -59,7 +68,7 @@
                     <p><?= $review['content']?></p>
                 </div>
 <?php 
-        $replies = getReplies();
+        $replies = getReplies($review['id']);
         if(!empty($replies)) {
             foreach($replies as $reply) {
 ?>
@@ -73,13 +82,13 @@
             if (isset($_SESSION['user'])) {
 ?>
                 <form action="process_blog.php" method="POST">
-                    <input type='hidden' name='review_id' value="<?= $reply['id'] ?>">
+                    <input type='hidden' name='review_id' value="<?= $review['id'] ?>">
                     <label for="replies_field"></label>
                     <textarea name="replies_field" id="replies_field" cols="30" rows="10"></textarea>
                     <input type="submit" name="replies_button" id="replies_button" value="Reply">
                 </form>
 <?php
-            }
+            }  
         }
     }
 ?>    

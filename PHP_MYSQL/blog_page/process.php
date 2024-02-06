@@ -84,8 +84,8 @@
         if(!empty($user)) {
             $encrypted_password = md5($password . '' . $user['salt']);
             if($user['password'] == $encrypted_password) {
-                $_SESSION['success'] = "Congratulations! You have successfully login.";
                 $_SESSION['user'] = $user['id'];
+                $_SESSION['first_name'] = $user['first_name'];
                 header('Location: index.php');
                 exit();
             } else {
